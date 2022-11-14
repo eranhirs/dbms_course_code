@@ -16,8 +16,8 @@ cursor = cnx.cursor(prepared=True)
 cursor.execute("""
     CREATE TABLE movies (
       movieID smallint AUTO_INCREMENT NOT NULL PRIMARY KEY,
-      title varchar(45) DEFAULT NULL,
-      duration smallint DEFAULT NULL
+      title varchar(45),
+      duration smallint
     );
 """)
 
