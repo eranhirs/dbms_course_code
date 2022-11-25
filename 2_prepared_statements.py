@@ -9,6 +9,9 @@ cnx = mysql.connector.connect(
     database='sakila'
 )
 
+# Set autocommit to true (this is circumstantial, think twice if you want to use this)
+cnx.autocommit = True
+
 # Create a cursor with prepared=True, necessary to run prepared statements
 cursor = cnx.cursor(prepared=True)
 
