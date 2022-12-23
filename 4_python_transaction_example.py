@@ -14,6 +14,9 @@ cnx = mysql.connector.connect(
 cursor = cnx.cursor()
 
 try:
+    # Start transaction
+    cnx.start_transaction()
+    
     # Execute the SQL command
     cursor.execute('UPDATE film SET rental_rate = rental_rate + rental_rate*0.2')
     cnx.commit()
